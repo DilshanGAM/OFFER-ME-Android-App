@@ -9,4 +9,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="secondaryColor">#FDC500</color>
+    <color name="notification_red">#FF0000</color>
 </resources>

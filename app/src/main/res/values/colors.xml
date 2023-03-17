@@ -11,4 +11,5 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="secondaryColor">#FDC500</color>
     <color name="tintGrey">#747474</color>
+    <color name="notification_red">#FF0000</color>
 </resources>

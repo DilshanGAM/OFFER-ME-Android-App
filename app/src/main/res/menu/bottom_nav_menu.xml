@@ -9,14 +9,15 @@
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_dashboard" />
-    <item
-        android:id="@+id/navigation_bookmarks"
-        android:icon="@drawable/ic_baseline_bookmark_24"
-        android:title="@string/title_bookmarks" />
+
     <item
         android:id="@+id/navigation_account"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_bookmarks"
+        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:title="@string/title_bookmarks" />
 
 
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_baseline_notifications_none_24" />
+
+    <TextView
+        android:id="@+id/countNotification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="99"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+</FrameLayout>

@@ -9,4 +9,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="secondaryColor">#FDC500</color>
+    <color name="titleColor">#FFFFFFFF</color>
+    <color name="fgtpwcolor">#00B3C0</color>
+    <color name="login_btn_text_color">#FFFFFFFF</color>
+    <color name="loglnecolor">#747474</color>
+    <color name="ggllogbtncolor">#FFFFFF</color>
+    <color name="dnthaveacccolor">#FFFFFF</color>
+    <color name="loginPageinputcolor">#747474</color>
+    <color name="notification_red">#FF0000</color>
+
 </resources>

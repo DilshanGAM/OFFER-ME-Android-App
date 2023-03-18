@@ -8,4 +8,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_bookmarks">Bookmarks</string>
+    <string name="Login_btn_Value">Login</string>
+    <string name="Login_title">Login</string>
+    <string name="edtEmail">Email or Phone</string>
+    <string name="edtEmailHint_value">Email or Phone</string>
+    <string name="password_hint_value">Password</string>
+    <string name="edtEmail_Hint_value">Email or Phone</string>
+    <string name="edtPassword_Hint_value">Password</string>
+    <string name="forget_pswrd_value">Forget password?</string>
+    <string name="dont_have_acc_value">Don\'t have an account?</string>
+    <string name="register_text_value">Register</string>
+    <string name="or_text">Or</string>
+    <string name="Fb_Login_btn_Value">Login with facebook</string>
+    <string name="ggl_Login_btn_Value">Login with google</string>
+    <string name="searchBarHint">Search for more offers</string>
 </resources>

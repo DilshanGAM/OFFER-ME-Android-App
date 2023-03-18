@@ -67,7 +67,6 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithCredential(GoogleAuthProvider.getCredential(account.idToken,null))
 
 
-
             }
         }else{
             Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT).show()

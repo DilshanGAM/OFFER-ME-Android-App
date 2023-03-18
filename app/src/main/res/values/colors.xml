@@ -8,7 +8,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="titleColor">#001D3D</color>
+    <color name="fgtpwcolor">#00B3C0</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="ggl_log_color">#1DFFFFFF</color>
+    <color name="loglnecolor">#747474</color>
+    <color name="fbBtnColor">#4267B2</color>
     <color name="secondaryColor">#FDC500</color>
+    <color name="dnthaveacccolor">#000000</color>
+    <color name="ggllogbtncolor">#747474</color>
     <color name="tintGrey">#747474</color>
+    <color name="login_btn_text_color">#FFFFFFFF</color>
+    <color name="loginPageinputcolor">#747474</color>
+    <color name="notification_red">#FF0000</color>
+
 </resources>

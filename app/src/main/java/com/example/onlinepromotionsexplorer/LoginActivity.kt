@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.onlinepromotionsexplorer.models.UIEffects
@@ -29,7 +30,13 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_login)
+
+        findViewById<TextView>(R.id.register_text).setOnClickListener{
+            startActivity(Intent(this@LoginActivity,Register::class.java))
+        }
+
         supportActionBar?.hide()
         UIEffects.setValidStatusBar(this)
         auth = FirebaseAuth.getInstance();
@@ -43,7 +50,6 @@ class LoginActivity : AppCompatActivity() {
         if(auth.currentUser != null){
             startActivity( Intent(this,HomeActivity::class.java))
         }
-
 
 
     }
@@ -77,4 +83,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
+
+
+
 }

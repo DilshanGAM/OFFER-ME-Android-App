@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AccountSettings">
+
+    <TextView
+        android:textAlignment="center"
+        android:textSize="@dimen/titleTextsize"
+        android:textStyle="bold"
+        android:textColor="@color/titleColor"
+        android:id="@+id/loginTittle"
+        android:text="@string/Accsettings_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/margin56"
+        android:textSize="@dimen/normalTextsize"
+        android:textColor="@color/tintGrey"
+        android:text="@string/youremailvalue" />
+
+    <EditText
+        android:id="@+id/setEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColor="@color/titleColor"
+        android:text="skyrek7@gmail.com"
+        app:backgroundTint="@color/fgtpwcolor"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:textSize="@dimen/normalTextsize"
+        android:textColor="@color/tintGrey"
+        android:text="YOUR NAME" />
+
+    <EditText
+        android:id="@+id/setName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColor="@color/titleColor"
+        android:text="SKYREK"
+        app:backgroundTint="@color/fgtpwcolor"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:textSize="@dimen/normalTextsize"
+        android:textColor="@color/tintGrey"
+        android:text="YOUR PASSWORD" />
+
+    <EditText
+        android:id="@+id/setPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColor="@color/titleColor"
+        android:text="SKYREK212121"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/icons8_eye_24"
+        app:backgroundTint="@color/fgtpwcolor"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:textSize="@dimen/normalTextsize"
+        android:textColor="@color/tintGrey"
+        android:text="YOUR LOCATION" />
+
+    <EditText
+        android:id="@+id/setLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColor="@color/titleColor"
+        android:text="Colombo"
+        app:backgroundTint="@color/fgtpwcolor"/>
+
+    <Button
+        android:id="@+id/updayeButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin56"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryColor"
+        android:textColor="@color/login_btn_text_color"
+        android:text="@string/Update_btn_Value"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="@dimen/normalTextsize"/>
+
+    <Button
+        android:id="@+id/deleteAccButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_error"
+        android:textColor="@color/login_btn_text_color"
+        android:text="@string/Delete_btn_Value"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="@dimen/normalTextsize"/>
+
+
+</LinearLayout>

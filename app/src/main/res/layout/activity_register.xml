@@ -3,39 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
-    <ImageView
-
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/imagelogowidth"
-        android:layout_height="@dimen/imagelogoheight"
-        android:layout_marginLeft="@dimen/marginLeftSize"
-        app:srcCompat="@drawable/splash_logo" />
+    tools:context=".Register">
 
     <TextView
         android:textAlignment="center"
         android:textSize="@dimen/titleTextsize"
         android:textStyle="bold"
         android:textColor="@color/titleColor"
-        android:id="@+id/loginTittle"
-        android:text="@string/Login_title"
+        android:id="@+id/registerTittle"
+        android:text="@string/Register_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin32"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"/>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/textInputLayout1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/height56"
         android:layout_marginLeft="@dimen/marginLeftSize"
-        android:layout_marginTop="@dimen/margin72"
+        android:layout_marginTop="@dimen/margin32"
         android:layout_marginRight="@dimen/marginLeftSize"
         android:textColorHint="@color/loginPageinputcolor"
         app:boxStrokeColor="@color/text_input_color"
@@ -43,19 +33,39 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/edtEmail_Hint_value"
+            android:hint="@string/edtUsename_Hint_value"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height56"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColorHint="@color/loginPageinputcolor"
+        app:boxStrokeColor="@color/text_input_color"
+        app:hintTextColor="@color/loginPageinputcolor"
+        tools:ignore="InvalidId">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtregEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/RegEmail_Hint_value"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtpwrd"
+        android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/height56"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginTop="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
@@ -65,35 +75,66 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtpassword"
+            android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/password_hint_value"/>
+            android:hint="@string/edtPhone_Hint_value"
+            android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/forget_pssword_text"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/fgtpwcolor"
-        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_height="@dimen/height56"
         android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
-        android:text="@string/forget_pswrd_value"/>
+        android:textColorHint="@color/loginPageinputcolor"
+        app:boxStrokeColor="@color/text_input_color"
+        app:hintTextColor="@color/loginPageinputcolor"
+        tools:ignore="InvalidId">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtpassword1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edtPwd1_Hint_value"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height56"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_marginRight="@dimen/marginLeftSize"
+        android:textColorHint="@color/loginPageinputcolor"
+        app:boxStrokeColor="@color/text_input_color"
+        app:hintTextColor="@color/loginPageinputcolor"
+        tools:ignore="InvalidId">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtpassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edtPwd2_Hint_value"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/regButton"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/margin32"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/secondaryColor"
-        android:onClick="click"
+        android:onClick="clickSubmit"
         android:textColor="@color/login_btn_text_color"
-        android:text="@string/Login_btn_Value"
+        android:text="@string/Submit_btn_Value"
         android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="@dimen/btnText24"/>
@@ -106,64 +147,32 @@
 
 
         <TextView
-            android:id="@+id/donthave_text"
+            android:id="@+id/haveacc_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textColor="@color/dnthaveacccolor"
             android:layout_marginTop="@dimen/marginLeftSize"
             android:layout_marginLeft="@dimen/marginLeftSize"
-            android:text="@string/dont_have_acc_value"/>
+            android:text="@string/have_acc_value"/>
 
         <TextView
-            android:id="@+id/register_text"
+            android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textColor="@color/fgtpwcolor"
             android:layout_marginTop="@dimen/marginLeftSize"
             android:layout_marginRight="@dimen/marginLeftSize"
-            android:text="@string/register_text_value"/>
+            android:text="@string/reglog_text_value"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/marginLeftSize"
-        android:gravity="center_horizontal">
-
-        <View
-            android:layout_width="@dimen/lineWidth"
-            android:layout_height="@dimen/lineHeight"
-            android:background="@color/loglnecolor"
-            android:layout_gravity="center"
-            android:layout_marginRight="2dp"
-            android:alpha="0.9"/>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:textColor="@color/loglnecolor"
-            android:text="@string/or_text" />
-
-        <View
-            android:layout_width="@dimen/lineWidth"
-            android:layout_marginLeft="2dp"
-            android:layout_gravity="center"
-            android:layout_height="@dimen/lineHeight"
-            android:background="@color/loglnecolor"
-            android:alpha="0.9"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/loginWithFb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/margin32"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
         android:backgroundTint="@color/fbBtnColor"
@@ -185,6 +194,5 @@
         android:drawableLeft="@drawable/icons8_google_44"
         android:textColor="@color/ggllogbtncolor"
         android:text="@string/ggl_Login_btn_Value" />
-
 
 </LinearLayout>

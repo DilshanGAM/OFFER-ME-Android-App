@@ -1,5 +1,6 @@
 package com.example.onlinepromotionsexplorer.Adapters
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
@@ -7,26 +8,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinepromotionsexplorer.R
+import com.example.onlinepromotionsexplorer.Tools.ImageLoader
+import com.example.onlinepromotionsexplorer.ViewOfferActivity
 import com.example.onlinepromotionsexplorer.models.Offer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class HomeRecycleAdapter(private val dataSet : Array<Offer>) : RecyclerView.Adapter<HomeRecycleAdapter.ViewHolder>(){
+class HomeRecycleAdapter(private val dataSet : MutableList<Offer>) : RecyclerView.Adapter<HomeRecycleAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val offerName: TextView
         val bookmarkButton : CheckBox
         val imageView : ImageView
+        val layout : LinearLayout
+        val bookmarks : TextView
 
         init {
             // Define click listener for the ViewHolder's View
             offerName = view.findViewById(R.id.offerName)
             bookmarkButton = view.findViewById(R.id.bookmarkButton)
             imageView = view.findViewById(R.id.offerImage)
+            layout  = view.findViewById(R.id.offerCardHolder)
+            bookmarks = view.findViewById(R.id.bookmarks)
+
         }
 
     }
@@ -39,31 +48,21 @@ class HomeRecycleAdapter(private val dataSet : Array<Offer>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.offerName.setText(dataSet[position].offerName)
         holder.bookmarkButton.isChecked = dataSet[position].bookmarked
-        GlobalScope.launch{
-
-            var image : Bitmap? = null
-            while(image == null){
-                image = getBitmap(dataSet[position].imgLink)
-                delay(500);
-            }
-            GlobalScope.launch (Dispatchers.Main){
-                holder.imageView.setImageBitmap(image)
-            }
+        holder.bookmarks.setText(Offer.getBookmarkString(dataSet[position].totalBookmarks))
+        ImageLoader.setImageView(dataSet[position].imgLink,holder.imageView)
+        holder.layout.setOnClickListener{
+            var intent :Intent = Intent(holder.offerName.context, ViewOfferActivity::class.java)
+            intent.putExtra(ViewOfferActivity.OFFER_TEXT,dataSet[position])
+            holder.offerName.context.startActivity(intent)
         }
+        holder.bookmarkButton.setOnClickListener{
+            dataSet[position].bookmarked = !dataSet[position].bookmarked
+        }
+
     }
 
     override fun getItemCount(): Int {
         return dataSet.size
     }
-    suspend fun getBitmap(url :String):Bitmap?{
-        var image: Bitmap? = null
-        try {
-            val inputStream = java.net.URL(url).openStream()
-            image = BitmapFactory.decodeStream(inputStream)
-        }catch(e:Exception){
-            e.printStackTrace()
-        }
 
-        return image;
-    }
 }

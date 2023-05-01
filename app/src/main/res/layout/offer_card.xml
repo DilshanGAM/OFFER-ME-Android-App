@@ -2,14 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/offerCardHolder"
     android:layout_width="match_parent"
     android:layout_height="@dimen/offer_card_height"
+    android:layout_margin="@dimen/smallMarginValue"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/offerImage"
         android:layout_width="match_parent"
         android:layout_height="@dimen/offerCardImageHeight"
+        android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
@@ -19,11 +22,18 @@
 
         <CheckBox
             android:id="@+id/bookmarkButton"
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:button="@drawable/bookmark_button" />
+
+        <TextView
+            android:id="@+id/bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
 
         <TextView
             android:id="@+id/offerName"
@@ -31,7 +41,10 @@
             android:layout_height="match_parent"
             android:layout_weight="10"
             android:gravity="fill"
+            android:maxLines="1"
+            android:singleLine="true"
             android:text="TextView"
-            android:textSize="24sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/offerViewNameTextSize" />
     </LinearLayout>
 </LinearLayout>

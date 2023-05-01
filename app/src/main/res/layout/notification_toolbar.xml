@@ -30,11 +30,13 @@
             android:scaleType="fitStart"
             app:srcCompat="@drawable/splash_logo"
             />
+
         <include
+            android:id="@+id/viewNotificationButton"
+            layout="@layout/notification_layout"
             android:layout_width="?attr/actionBarSize"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            layout="@layout/notification_layout"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
 

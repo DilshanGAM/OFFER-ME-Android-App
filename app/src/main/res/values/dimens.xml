@@ -4,4 +4,15 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="offer_card_height">250dp</dimen>
     <dimen name="offerCardImageHeight">200dp</dimen>
+    <dimen name="loadScreenImagePadding">30dp</dimen>
+    <dimen name="viewOfferImageHeight">300dp</dimen>
+    <dimen name="offerViewNameTextSize">16sp</dimen>
+    <dimen name="appbarLogoMargin">10dp</dimen>
+    <dimen name="notificationCardImageWidth">50dp</dimen>
+    <dimen name="notificationReadDotSize">20dp</dimen>
+    <dimen name="searchBarRadius">30dp</dimen>
+    <dimen name="searchBarTextHeight">44dp</dimen>
+    <dimen name="offerCardMargin">5dp</dimen>
+    <dimen name="smallMarginValue">2dp</dimen>
+
 </resources>

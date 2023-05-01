@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewOfferActivity">
+
+    <include
+        layout="@layout/defaut_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSlot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewOfferImageHeight"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nameSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:fontFamily="sans-serif-black"
+        android:text="TextView"
+        android:textSize="@dimen/offerViewNameTextSize" />
+
+    <TextView
+        android:id="@+id/locationSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+        android:drawableTint="@color/secondaryColor"
+        android:fontFamily="sans-serif-black"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/dateSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/ic_baseline_pending_actions_24"
+        android:drawableTint="@color/secondaryColor"
+        android:fontFamily="sans-serif-black"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/descriptionSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:text="@string/descriptionNotFoundText"
+        android:textSize="@dimen/activity_horizontal_margin" />
+
+    <CheckBox
+        android:id="@+id/bookmarkButtonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:button="@drawable/bookmark_button_selector"
+        app:useMaterialThemeColors="false" />
+
+</LinearLayout>

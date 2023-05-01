@@ -1,5 +1,10 @@
 package com.example.onlinepromotionsexplorer
 
+import android.util.Log
+import com.example.onlinepromotionsexplorer.models.Offer
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,4 +19,5 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
 }

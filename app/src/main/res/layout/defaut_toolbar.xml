@@ -8,9 +8,9 @@
     android:layout_height="?android:attr/actionBarSize"
     android:background="@color/backgroundColor"
     android:minHeight="?attr/actionBarSize"
-    android:paddingStart="16dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+
+
     android:theme="?attr/actionBarTheme"
     app:contentInsetStart="0dp"
     >
@@ -18,12 +18,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
+        android:layout_marginTop="@dimen/appbarLogoMargin"
+        android:layout_marginBottom="@dimen/appbarLogoMargin"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scaleType="fitStart"
         app:srcCompat="@drawable/splash_logo"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="10dp" />
+        tools:layout_editor_absoluteY="10dp"
+        />
 
 
 </androidx.appcompat.widget.Toolbar>

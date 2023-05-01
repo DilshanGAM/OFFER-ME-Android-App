@@ -1,9 +1,13 @@
 package com.example.onlinepromotionsexplorer.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -12,6 +16,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinepromotionsexplorer.Adapters.HomeRecycleAdapter
+import com.example.onlinepromotionsexplorer.LoginActivity
+import com.example.onlinepromotionsexplorer.NotificationActivity
 import com.example.onlinepromotionsexplorer.R
 import com.example.onlinepromotionsexplorer.databinding.FragmentHomeBinding
 import com.example.onlinepromotionsexplorer.models.Offer
@@ -36,26 +42,23 @@ class HomeFragment : Fragment() {
 
         (activity as AppCompatActivity?)!!.setSupportActionBar(binding.root.findViewById(R.id.toolbar))
 
+        binding.root.findViewById<FrameLayout>(R.id.viewNotificationButton).setOnClickListener{
+            startActivity(Intent(activity,NotificationActivity::class.java))
+
+        }
 
         var recyclerView = binding.homeRecycler
 
 
-        recyclerView.adapter = HomeRecycleAdapter(arrayOf(
-            Offer("Pizza",false,"sdaf","https://picsum.photos/300/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",false,"sdaf","https://picsum.photos/300/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",false,"sdaf","https://picsum.photos/300/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300"),
-            Offer("Pizza",true,"sdaf","https://picsum.photos/200/300")))
+        recyclerView.adapter = HomeRecycleAdapter(
+            Offer.offerList
+        )
         val layoutManager = GridLayoutManager(this.context,2,GridLayoutManager.VERTICAL,false)
-
         recyclerView.layoutManager = GridLayoutManager(this.context,2,GridLayoutManager.VERTICAL,true)
+//        var notificationButton = activity?.findViewById<View>(R.id.notificationButton)
+//        notificationButton?.setOnClickListener {
+//
+//        }
         return root
     }
 

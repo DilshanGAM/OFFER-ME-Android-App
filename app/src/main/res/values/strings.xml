@@ -25,4 +25,32 @@
     <string name="dateNotMentionedText">Valid date not found</string>
     <string name="invalidNameText">Valid name not found</string>
     <string name="titleBookMark">Bookmarks</string>
+=======
+    <string name="Register_title">Register</string>
+    <string name="edtUsename_Hint_value">Username</string>
+    <string name="RegEmail_Hint_value">Email</string>
+    <string name="edtPhone_Hint_value">Phone number</string>
+    <string name="edtPwd1_Hint_value">Password</string>
+    <string name="edtPwd2_Hint_value">Confirm password</string>
+    <string name="Submit_btn_Value">Submit</string>
+    <string name="have_acc_value">Have an account?</string>
+    <string name="reglog_text_value">Log in here.</string>
+    <string name="My_account">My account</string>
+    <string name="Acc_btn_Value">My Account</string>
+    <string name="Req_btn_Value">My Request</string>
+    <string name="Not_btn_Value">Notifications</string>
+    <string name="Llogout_btn_Value">Log Out</string>
+    <string name="Accsettings_title">Account Settings</string>
+    <string name="youremailvalue">YOUR EMAIL</string>
+    <string name="Update_btn_Value">Save Details</string>
+    <string name="Delete_btn_Value">Delete Account</string>
+    <string name="Yourtotaloffers">Your total offers</string>
+    <string name="Activeoffers">Active offers</string>
+    <string name="offerTtlValue">26</string>
+    <string name="offerValue">5</string>
+    <string name="YourtotalReq">Your Total Request</string>
+    <string name="TtlResponse">Total Response</string>
+    <string name="reqValue">54</string>
+    <string name="resValue">6</string>
+>>>>>>> 245cdcdc37e7763bd25f3cf341e221a095eb921c
 </resources>

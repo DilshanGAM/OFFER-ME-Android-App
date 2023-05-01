@@ -15,4 +15,20 @@
     <dimen name="offerCardMargin">5dp</dimen>
     <dimen name="smallMarginValue">2dp</dimen>
 
+    <dimen name="titleTextsize">34dp</dimen>
+    <dimen name="marginLeftSize">16dp</dimen>
+    <dimen name="margin56">56dp</dimen>
+    <dimen name="normalTextsize">16dp</dimen>
+    <dimen name="imagelogowidth">237dp</dimen>
+    <dimen name="imagelogoheight">40dp</dimen>
+    <dimen name="margin32">32dp</dimen>
+    <dimen name="margin72">72dp</dimen>
+    <dimen name="btnText24">24dp</dimen>
+    <dimen name="lineWidth">170dp</dimen>
+    <dimen name="lineHeight">1dp</dimen>
+    <dimen name="height56">56dp</dimen>
+    <dimen name="Accpicwidth">144dp</dimen>
+    <dimen name="AccpicHeight">150dp</dimen>
+    <dimen name="accBtnsize">76dp</dimen>
+    <dimen name="AccBtnLeftRight">48dp</dimen>
 </resources>

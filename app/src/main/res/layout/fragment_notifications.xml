@@ -1,33 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
+    android:orientation="vertical"
+    tools:context=".ui.notifications.NotificationsFragment" >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/Accpicwidth"
+        android:layout_height="@dimen/AccpicHeight"
+        android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38"
+        android:layout_gravity="center_horizontal"
+        />
 
     <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account"
-        app:layout_constraintBottom_toTopOf="@+id/text_notifications"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/My_account"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin32"
+        android:textSize="@dimen/titleTextsize"
+        android:textColor="@color/titleColor"
+        android:layout_gravity="center_horizontal"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/myAccBtn1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accBtnsize"
+        android:layout_marginTop="@dimen/margin32"
+        android:layout_marginLeft="@dimen/AccBtnLeftRight"
+        android:layout_marginRight="@dimen/AccBtnLeftRight"
+        android:backgroundTint="@color/UsrAccBtnColor"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/icons8_user_44"
+        android:textColor="@color/AccBtnsColor"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/normalTextsize"
+        android:text="@string/Acc_btn_Value" />
+
+    <Button
+        android:id="@+id/myAccBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accBtnsize"
+        android:layout_marginLeft="@dimen/AccBtnLeftRight"
+        android:layout_marginRight="@dimen/AccBtnLeftRight"
+        android:backgroundTint="@color/UsrAccBtnColor"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/icons8_offer_44"
+        android:textColor="@color/AccBtnsColor"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/normalTextsize"
+        android:text="@string/Req_btn_Value" />
+
+    <Button
+        android:id="@+id/myAccBtn3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accBtnsize"
+        android:layout_marginLeft="@dimen/AccBtnLeftRight"
+        android:layout_marginRight="@dimen/AccBtnLeftRight"
+        android:backgroundTint="@color/UsrAccBtnColor"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/icons8_notification_44"
+        android:textColor="@color/AccBtnsColor"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/normalTextsize"
+        android:text="@string/Not_btn_Value" />
+
+    <Button
+        android:id="@+id/myAccBtn4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accBtnsize"
+        android:layout_marginTop="@dimen/margin32"
+        android:layout_marginLeft="@dimen/AccBtnLeftRight"
+        android:layout_marginRight="@dimen/AccBtnLeftRight"
+        android:backgroundTint="@color/UsrAccBtnColor"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/icons8_log_out_44"
+        android:textColor="@color/AccBtnsColor"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/normalTextsize"
+        android:text="@string/Llogout_btn_Value" />
+
+
+</LinearLayout>

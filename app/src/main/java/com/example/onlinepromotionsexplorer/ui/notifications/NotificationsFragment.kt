@@ -1,12 +1,17 @@
 package com.example.onlinepromotionsexplorer.ui.notifications
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.onlinepromotionsexplorer.AccountSettings
+import com.example.onlinepromotionsexplorer.R
+import com.example.onlinepromotionsexplorer.Register
 import com.example.onlinepromotionsexplorer.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
@@ -22,16 +27,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        root.findViewById<Button>(R.id.myAccBtn1)?.setOnClickListener{
+            startActivity(Intent(this.activity, AccountSettings::class.java))
         }
+
         return root
     }
 

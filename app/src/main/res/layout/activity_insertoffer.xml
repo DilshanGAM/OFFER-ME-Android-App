@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Viewscroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/lay_marginLeft"
+    android:layout_marginTop="@dimen/lay_marginTop"
+    android:layout_marginRight="@dimen/lay_marginRight"
+    android:layout_marginBottom="@dimen/lay_marginBottom"
+    android:orientation="vertical"
+    tools:context=".InsertofferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin1">
+
+            <AutoCompleteTextView
+                android:id="@+id/spnDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_Height"
+                android:hint="@string/spnDropdown"
+                android:inputType="none">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin2">
+
+            <AutoCompleteTextView
+                android:id="@+id/txtItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_marginHeight1"
+                android:ems="10"
+                android:hint="@string/txtItem"
+                android:inputType="textPersonName"
+                android:padding="@dimen/pading"
+                android:textAlignment="center" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin3">
+
+            <EditText
+                android:id="@+id/txtAboutItem"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/txtAboutItem"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_marginHeight4"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginBottom="@dimen/lay_marginBottom1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartDate"
+                android:layout_width="@dimen/lay_marginWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lay_marginLeft"
+                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="@string/btnStartDate" />
+
+            <Button
+                android:id="@+id/btnEndDate"
+                android:layout_width="@dimen/lay_marginWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lay_marginLeft"
+                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="@string/btnEndDate" />
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin">
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_Height"
+                android:ems="10"
+                android:hint="@string/txtPrice"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin">
+
+            <EditText
+                android:id="@+id/txtOffer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_marginHeight1"
+                android:ems="10"
+                android:hint="@string/txtOffer"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_marginHeight1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lay_marginLeft"
+                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="@string/btnImage" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/lay_margin">
+
+            <EditText
+                android:id="@+id/txtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_marginHeight1"
+                android:ems="10"
+                android:hint="@string/txtLocation"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/lay_marginLeft3"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginRight="@dimen/lay_marginLeft3"
+            android:backgroundTint="#FDC500"
+            android:text="Submit" />
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <AutoCompleteTextView-->
+    <!--            android:id="@+id/spnDropdown"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:hint="@string/spnDropdown"-->
+    <!--            android:inputType="none">-->
+
+    <!--        </AutoCompleteTextView>-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <AutoCompleteTextView-->
+    <!--            android:id="@+id/txtItem"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="@string/txtItem"-->
+    <!--            android:inputType="textPersonName"-->
+    <!--            android:padding="18dp"-->
+    <!--            android:textAlignment="center" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/txtAboutItem"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:gravity="start|top"-->
+    <!--            android:hint="@string/txtAboutItem"-->
+    <!--            android:inputType="textMultiLine"-->
+    <!--            android:padding="18dp" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnStartDate"-->
+    <!--            android:layout_width="120dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="@string/btnStartDate" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnEndDate"-->
+    <!--            android:layout_width="120dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="@string/btnEndDate" />-->
+    <!--    </LinearLayout>-->
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/txtPrice"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="@string/txtPrice"-->
+    <!--            android:inputType="textPersonName"-->
+    <!--            android:padding="18dp" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/txtOffer"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="@string/txtOffer"-->
+    <!--            android:inputType="textPersonName"-->
+    <!--            android:padding="18dp" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="@string/btnImage" />-->
+
+    <!--    </LinearLayout>-->
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/txtLocation"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:ems="10"-->
+    <!--            android:hint="@string/txtLocation"-->
+    <!--            android:inputType="textPersonName"-->
+    <!--            android:padding="18dp" />-->
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button8"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="120dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:layout_marginRight="120dp"-->
+    <!--        android:text="Button" />-->
+
+    <!--</LinearLayout>-->
+

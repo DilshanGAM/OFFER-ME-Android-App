@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewOfferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/spnDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                android:padding="10dp"
+                android:text="Electronic/tv">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/txtItem"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="@string/txtitem"
+                android:textAlignment="viewStart" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/txtAboutItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:padding="18dp"
+                android:text="COGNITIVE PROCESSOR XR™ – Revolutionary TV processing technology that understands how humans see and hear to deliver intense contrast with pure blacks, high peak brightness, and natural colors." />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Date"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End Date"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="12/04/2023"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="28/04/2023"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="Rs.90000.00"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/txtOffer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="10%" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/txtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="Galle Abans" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/btnEdit" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDelete"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="@string/checkBoxDelete"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/deleteButton"
+            android:text="@string/btnDelete" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="30dp"
+            android:background="?android:attr/listDivider" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -31,4 +31,40 @@
     <dimen name="AccpicHeight">150dp</dimen>
     <dimen name="accBtnsize">76dp</dimen>
     <dimen name="AccBtnLeftRight">48dp</dimen>
+
+
+<!--    offer management-bathiya-->
+    <dimen name="lay_margin">9dp</dimen>
+    <dimen name="lay_marginLeft">9dp</dimen>
+    <dimen name="lay_marginTop">9dp</dimen>
+    <dimen name="lay_marginRight">9dp</dimen>
+    <dimen name="lay_marginBottom">9dp</dimen>
+    <dimen name="lay_margin1">10dp</dimen>
+    <dimen name="lay_Height">50dp</dimen>
+    <dimen name="lay_margin2">10dp</dimen>
+    <dimen name="lay_marginHeight1">50dp</dimen>
+    <dimen name="pading">18dp</dimen>
+    <dimen name="lay_margin3">10dp</dimen>
+    <dimen name="padding">18dp</dimen>
+    <dimen name="lay_marginHeight4">50dp</dimen>
+    <dimen name="lay_marginBottom1">5dp</dimen>
+    <dimen name="lay_marginWidth">120dp</dimen>
+    <dimen name="lay_marginLeft3">120dp</dimen>
+    <dimen name="offer_Marg_left">9dp</dimen>
+    <dimen name="offer_Marg_top">9dp</dimen>
+    <dimen name="offer_Marg_right">9dp</dimen>
+    <dimen name="offer_Marg_bottom">9dp</dimen>
+    <dimen name="offer_Margin1">20dp</dimen>
+    <dimen name="offer_Radius">20dp</dimen>
+    <dimen name="offer_Elevation">10dp</dimen>
+    <dimen name="offer_Marg_padding">20dp</dimen>
+    <dimen name="offer_textSize">32sp</dimen>
+    <dimen name="offer_Marg_Height">50dp</dimen>
+    <dimen name="offer_Marg_left1">150dp</dimen>
+    <dimen name="offer_Marg_TextSize2">20sp</dimen>
+    <dimen name="offer_Marg_textSize3">16sp</dimen>
+    <!--    offer management-bathiya-end-->
+
+
+
 </resources>

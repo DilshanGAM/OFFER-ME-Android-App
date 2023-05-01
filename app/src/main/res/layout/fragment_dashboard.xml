@@ -78,7 +78,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnViewOffer"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"

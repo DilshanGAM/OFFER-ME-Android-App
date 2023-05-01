@@ -53,4 +53,35 @@
     <string name="reqValue">54</string>
     <string name="resValue">6</string>
 >>>>>>> 245cdcdc37e7763bd25f3cf341e221a095eb921c
+
+
+<!--    offer managent -->
+<!--    <string name="app_name">Add Your Offer</string>-->
+    <string name="selectDropdown">Select Category</string>
+    <string name="spnDropdown">Select Category</string>
+    <string name="txtItemName">Item Name</string>
+    <string name="txtItem">Item Name</string>
+    <string name="txtAboutItem">About Your Item</string>
+    <string name="btnStartDate">Start Date</string>
+    <string name="btnEndDate">End Date</string>
+    <string name="txtPrice">Value of Item</string>
+    <string name="txtOffer">Offer Percentage</string>
+    <string name="btnImage">Add Images</string>
+    <string name="btnLocation">Shop Location</string>
+    <string name="txtLocation">Shop Location</string>
+    <string name="txtTitle">LED TV</string>
+    <string name="txtValue">Rs.87000.00</string>
+    <string name="txtOfferPrice">RS.79000.00</string>
+    <string name="txtInfo">Offered Price</string>
+    <string name="txtitem">LED TV</string>
+    <string name="btnEdit">Edite</string>
+    <string name="checkBoxDelete">Confirm Delete</string>
+    <string name="btnDelete">Delete Offer</string>
+    <string name="Delete">btnDeleteOffer</string>
+    <string name="btnDeleteOffer">Delete</string>
+    <string name="btnUpdateOffer">Edite</string>
+
+    <!--    __________end__________-->
+
+
 </resources>

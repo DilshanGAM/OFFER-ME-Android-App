@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationHolder"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="@dimen/smallMarginValue"
+    android:layout_marginRight="@dimen/smallMarginValue"
+    android:layout_marginBottom="@dimen/smallMarginValue"
+    android:layout_weight="1">
+
+
+    <ImageView
+        android:id="@+id/readDot"
+        android:layout_width="@dimen/notificationReadDotSize"
+        android:layout_height="@dimen/notificationReadDotSize"
+        android:layout_gravity="right|center_vertical"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/rounded_corner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:layout_width="@dimen/notificationCardImageWidth"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notificationNameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/notificationDateField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

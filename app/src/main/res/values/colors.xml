@@ -20,6 +20,9 @@
     <color name="tintGrey">#747474</color>
     <color name="login_btn_text_color">#FFFFFFFF</color>
     <color name="loginPageinputcolor">#747474</color>
+    <color name="notification_red">#FF0000</color>
+
+
     <color name="UsrAccBtnColor">#F3F3F3</color>
     <color name="AccBtnsColor">#747474</color>
 </resources>

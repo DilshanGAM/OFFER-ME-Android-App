@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boxBackgroundColor="@color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/searchBarRadius"
+        app:boxCornerRadiusBottomStart="@dimen/searchBarRadius"
+        app:boxCornerRadiusTopEnd="@dimen/searchBarRadius"
+        app:boxCornerRadiusTopStart="@dimen/searchBarRadius"
+        app:boxStrokeColor="@color/tintGrey"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintTextColor="@color/tintGrey"
+        app:startIconDrawable="@drawable/ic_baseline_search_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="@dimen/searchBarTextHeight"
+            android:background="@drawable/searchbar_background"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:hint="@string/searchBarHint" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

@@ -16,4 +16,7 @@
     <color name="ggllogbtncolor">#FFFFFF</color>
     <color name="dnthaveacccolor">#FFFFFF</color>
     <color name="loginPageinputcolor">#747474</color>
+    <color name="notification_red">#FF0000</color>
+
+
 </resources>

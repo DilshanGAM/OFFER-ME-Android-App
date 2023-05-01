@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="offer_card_height">200dp</dimen>
+    <dimen name="loadScreenImagePadding">30dp</dimen>
+</resources>

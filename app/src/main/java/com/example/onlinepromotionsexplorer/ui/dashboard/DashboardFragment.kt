@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.onlinepromotionsexplorer.MyRequestList
 import com.example.onlinepromotionsexplorer.OfferListActivity
 import com.example.onlinepromotionsexplorer.databinding.FragmentDashboardBinding
 
@@ -31,6 +32,11 @@ class DashboardFragment : Fragment() {
 
         binding.btnViewOffer.setOnClickListener{
             val intent  = Intent(this.context, OfferListActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRequest.setOnClickListener {
+            val intent= Intent(this.context, MyRequestList ::class.java)
             startActivity(intent)
         }
 

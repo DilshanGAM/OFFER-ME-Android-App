@@ -52,7 +52,8 @@
     <string name="TtlResponse">Total Response</string>
     <string name="reqValue">54</string>
     <string name="resValue">6</string>
->>>>>>> 245cdcdc37e7763bd25f3cf341e221a095eb921c
+    <string name="item_lable" />
+    >>>>>>> 245cdcdc37e7763bd25f3cf341e221a095eb921c
 
 
 <!--    offer managent -->

@@ -27,7 +27,9 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/circles"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="-16dp">
+                tools:layout_editor_absoluteY="-16dp"
+                >
+
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -68,6 +70,7 @@
                     app:layout_constraintStart_toStartOf="@+id/textView10"
                     app:layout_constraintTop_toBottomOf="@+id/textView10"
                     app:layout_constraintVertical_bias="0.169" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

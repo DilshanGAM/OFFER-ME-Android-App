@@ -28,6 +28,8 @@ class NotificationActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         recyclerView.layoutManager = layoutManager
 
+
+
     }
 
 

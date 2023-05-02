@@ -1,87 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ui.notifications.NotificationsFragment" >
+    tools:context=".ui.notifications.NotificationsFragment">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="@dimen/Accpicwidth"
-        android:layout_height="@dimen/AccpicHeight"
-        android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38"
-        android:layout_gravity="center_horizontal"
-        />
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="730dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/My_account"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/margin32"
-        android:textSize="@dimen/titleTextsize"
-        android:textColor="@color/titleColor"
-        android:layout_gravity="center_horizontal"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:background="@drawable/top_backgroungpc">
 
-    <Button
-        android:id="@+id/myAccBtn1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/accBtnsize"
-        android:layout_marginTop="@dimen/margin32"
-        android:layout_marginLeft="@dimen/AccBtnLeftRight"
-        android:layout_marginRight="@dimen/AccBtnLeftRight"
-        android:backgroundTint="@color/UsrAccBtnColor"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/icons8_user_44"
-        android:textColor="@color/AccBtnsColor"
-        android:textAlignment="viewStart"
-        android:textSize="@dimen/normalTextsize"
-        android:text="@string/Acc_btn_Value" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circles"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="-16dp">
 
-    <Button
-        android:id="@+id/myAccBtn2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/accBtnsize"
-        android:layout_marginLeft="@dimen/AccBtnLeftRight"
-        android:layout_marginRight="@dimen/AccBtnLeftRight"
-        android:backgroundTint="@color/UsrAccBtnColor"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/icons8_offer_44"
-        android:textColor="@color/AccBtnsColor"
-        android:textAlignment="viewStart"
-        android:textSize="@dimen/normalTextsize"
-        android:text="@string/Req_btn_Value" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="155dp"
+                    android:layout_height="109dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginTop="72dp"
+                    android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/myAccBtn3"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/accBtnsize"
-        android:layout_marginLeft="@dimen/AccBtnLeftRight"
-        android:layout_marginRight="@dimen/AccBtnLeftRight"
-        android:backgroundTint="@color/UsrAccBtnColor"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/icons8_notification_44"
-        android:textColor="@color/AccBtnsColor"
-        android:textAlignment="viewStart"
-        android:textSize="@dimen/normalTextsize"
-        android:text="@string/Not_btn_Value" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="104dp"
+                    android:text="@string/My_account"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/titleTextsize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    app:layout_constraintVertical_bias="0.152" />
 
-    <Button
-        android:id="@+id/myAccBtn4"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/accBtnsize"
-        android:layout_marginTop="@dimen/margin32"
-        android:layout_marginLeft="@dimen/AccBtnLeftRight"
-        android:layout_marginRight="@dimen/AccBtnLeftRight"
-        android:backgroundTint="@color/UsrAccBtnColor"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/icons8_log_out_44"
-        android:textColor="@color/AccBtnsColor"
-        android:textAlignment="viewStart"
-        android:textSize="@dimen/normalTextsize"
-        android:text="@string/Llogout_btn_Value" />
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="malithdilshan@gamil.com"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"
+                    app:layout_constraintHorizontal_bias="0.404"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.169" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+        <Button
+            android:id="@+id/myAccBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/accBtnsize"
+            android:layout_marginLeft="@dimen/AccBtnLeftRight"
+            android:layout_marginTop="@dimen/margin32"
+            android:layout_marginRight="@dimen/AccBtnLeftRight"
+            android:backgroundTint="@color/UsrAccBtnColor"
+            android:drawableLeft="@drawable/icons8_user_44"
+            android:text="@string/Acc_btn_Value"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/AccBtnsColor"
+            android:textSize="@dimen/normalTextsize" />
+
+        <Button
+            android:id="@+id/myAccBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/accBtnsize"
+            android:layout_marginLeft="@dimen/AccBtnLeftRight"
+            android:layout_marginRight="@dimen/AccBtnLeftRight"
+            android:backgroundTint="@color/UsrAccBtnColor"
+            android:drawableLeft="@drawable/icons8_offer_44"
+            android:text="@string/Req_btn_Value"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/AccBtnsColor"
+            android:textSize="@dimen/normalTextsize" />
+
+        <Button
+            android:id="@+id/myAccBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/accBtnsize"
+            android:layout_marginLeft="@dimen/AccBtnLeftRight"
+            android:layout_marginRight="@dimen/AccBtnLeftRight"
+            android:backgroundTint="@color/UsrAccBtnColor"
+            android:drawableLeft="@drawable/icons8_notification_44"
+            android:text="@string/Not_btn_Value"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/AccBtnsColor"
+            android:textSize="@dimen/normalTextsize" />
+
+        <Button
+            android:id="@+id/myAccBtn4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/accBtnsize"
+            android:layout_marginLeft="@dimen/AccBtnLeftRight"
+            android:layout_marginTop="@dimen/margin32"
+            android:layout_marginRight="@dimen/AccBtnLeftRight"
+            android:backgroundTint="@color/UsrAccBtnColor"
+            android:drawableLeft="@drawable/icons8_log_out_44"
+            android:text="@string/Llogout_btn_Value"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/AccBtnslogoutcolur"
+            android:textSize="@dimen/normalTextsize" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

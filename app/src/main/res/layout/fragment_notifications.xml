@@ -28,19 +28,41 @@
                 android:background="@drawable/circles"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="-16dp"
+
                 >
 
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="155dp"
-                    android:layout_height="109dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="124dp"
-                    android:layout_marginTop="72dp"
-                    android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginBottom="50dp"
+                    app:cardCornerRadius="65dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38" />
+
+                </androidx.cardview.widget.CardView>
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView3"-->
+<!--                    android:layout_width="155dp"-->
+<!--                    android:layout_height="109dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="124dp"-->
+<!--                    android:layout_marginTop="72dp"-->
+<!--                    android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
                 <TextView
                     android:id="@+id/textView10"
@@ -48,6 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="104dp"
+                    android:layout_marginBottom="76dp"
                     android:text="@string/My_account"
                     android:textColor="@color/titleColor"
                     android:textSize="@dimen/titleTextsize"

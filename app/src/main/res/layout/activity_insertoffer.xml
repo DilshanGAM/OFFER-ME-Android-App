@@ -18,21 +18,14 @@
         android:orientation="vertical">
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/lay_margin1">
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/lay_margin1"
+            android:entries="@array/spinner_data" />
 
-            <AutoCompleteTextView
-                android:id="@+id/spnDropdown"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/lay_Height"
-                android:hint="@string/spnDropdown"
-                android:inputType="none">
 
-            </AutoCompleteTextView>
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -41,7 +34,7 @@
             android:layout_margin="@dimen/lay_margin2">
 
             <AutoCompleteTextView
-                android:id="@+id/txtItem"
+                android:id="@+id/nameInput"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
@@ -60,7 +53,7 @@
             android:layout_margin="@dimen/lay_margin3">
 
             <EditText
-                android:id="@+id/txtAboutItem"
+                android:id="@+id/detailsInput"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:ems="10"
@@ -71,6 +64,34 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_marginHeight4"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginBottom="@dimen/lay_marginBottom1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/startInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="startDate"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/endInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="endDate"
+                android:inputType="date" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/lay_marginHeight4"
@@ -79,26 +100,23 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnStartDate"
-                android:layout_width="@dimen/lay_marginWidth"
+                android:id="@+id/startDateBtn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/lay_marginLeft"
-                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FDC500"
-                android:text="@string/btnStartDate" />
+                android:text="startDate" />
 
             <Button
-                android:id="@+id/btnEndDate"
-                android:layout_width="@dimen/lay_marginWidth"
+                android:id="@+id/endDateBtn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/lay_marginLeft"
-                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FDC500"
-                android:text="@string/btnEndDate" />
+                android:text="End date" />
         </LinearLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -107,7 +125,7 @@
             android:layout_margin="@dimen/lay_margin">
 
             <EditText
-                android:id="@+id/txtPrice"
+                android:id="@+id/priceInput"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/lay_Height"
                 android:ems="10"
@@ -124,7 +142,7 @@
             android:layout_margin="@dimen/lay_margin">
 
             <EditText
-                android:id="@+id/txtOffer"
+                android:id="@+id/percentageInput"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
@@ -140,7 +158,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnImage"
+                android:id="@+id/offerImageSelecter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/lay_marginLeft"
@@ -159,7 +177,7 @@
             android:layout_margin="@dimen/lay_margin">
 
             <EditText
-                android:id="@+id/txtLocation"
+                android:id="@+id/locationInput"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
@@ -170,7 +188,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnEdit"
+            android:id="@+id/addItemButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/lay_marginLeft3"

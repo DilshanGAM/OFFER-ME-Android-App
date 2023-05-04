@@ -81,6 +81,11 @@
     <string name="Delete">btnDeleteOffer</string>
     <string name="btnDeleteOffer">Delete</string>
     <string name="btnUpdateOffer">Edite</string>
+    <string-array name="spinner_data">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
 
     <!--    __________end__________-->
 

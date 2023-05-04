@@ -23,7 +23,7 @@
             android:layout_margin="10dp">
 
             <AutoCompleteTextView
-                android:id="@+id/spnDropdown"
+                android:id="@+id/categoryInput"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="none"
@@ -40,7 +40,7 @@
             android:layout_margin="10dp">
 
             <AutoCompleteTextView
-                android:id="@+id/txtItem"
+                android:id="@+id/nameInput"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -59,7 +59,7 @@
             android:layout_margin="10dp">
 
             <EditText
-                android:id="@+id/txtAboutItem"
+                android:id="@+id/detailsInput"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -128,7 +128,7 @@
             android:layout_margin="10dp">
 
             <EditText
-                android:id="@+id/txtPrice"
+                android:id="@+id/priceInput"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -146,7 +146,7 @@
             android:layout_margin="10dp">
 
             <EditText
-                android:id="@+id/txtOffer"
+                android:id="@+id/percentageInput"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -164,7 +164,7 @@
             android:layout_margin="10dp">
 
             <EditText
-                android:id="@+id/txtLocation"
+                android:id="@+id/locationInput"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -175,7 +175,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnEdit"
+            android:id="@+id/addItemButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"

@@ -10,44 +10,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginRight="9dp"
-        android:layout_marginBottom="9dp"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/lay_margin1"
+            android:entries="@array/spinner_data" />
 
-            <AutoCompleteTextView
-                android:id="@+id/categoryInput"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="none"
-                android:padding="10dp"
-                android:text="Electronic/HeadPhones">
 
-            </AutoCompleteTextView>
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/lay_margin2">
 
             <AutoCompleteTextView
                 android:id="@+id/nameInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
+                android:hint="@string/txtItem"
                 android:inputType="textPersonName"
-                android:padding="10dp"
-                android:text="Sony Earphone"
-                android:textAlignment="viewStart" />
+                android:padding="@dimen/pading"
+                android:textAlignment="center" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,86 +45,88 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/lay_margin3">
 
             <EditText
                 android:id="@+id/detailsInput"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:ems="10"
                 android:gravity="start|top"
+                android:hint="@string/txtAboutItem"
                 android:inputType="textMultiLine"
-                android:padding="18dp"
-                android:text="SALE WI-C310 Wireless In-ear Headphones with Microphone | Black Model: WI-C310 " />
+                android:padding="@dimen/padding" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Start Date"
-                android:textAlignment="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="End Date"
-                android:textAlignment="center"
-                android:textSize="16sp" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
+            android:layout_height="@dimen/lay_marginHeight4"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginBottom="@dimen/lay_marginBottom1"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView"
+            <EditText
+                android:id="@+id/startInput"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="12/04/2023"
-                android:textAlignment="center"
-                android:textSize="24sp" />
+                android:ems="10"
+                android:gravity="center"
+                android:hint="startDate"
+                android:inputType="date" />
 
-            <TextView
-                android:id="@+id/textView2"
+            <EditText
+                android:id="@+id/endInput"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="28/04/2023"
-                android:textAlignment="center"
-                android:textSize="24sp" />
+                android:ems="10"
+                android:gravity="center"
+                android:hint="endDate"
+                android:inputType="date" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_marginHeight4"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginBottom="@dimen/lay_marginBottom1"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/startDateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="startDate" />
+
+            <Button
+                android:id="@+id/endDateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="End date" />
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/lay_margin">
 
             <EditText
                 android:id="@+id/priceInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/lay_Height"
                 android:ems="10"
+                android:hint="@string/txtPrice"
                 android:inputType="textPersonName"
-                android:padding="10dp"
-                android:text="Rs.1900.00"
-                android:textSize="16sp" />
+                android:padding="@dimen/padding" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,34 +134,51 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/lay_margin">
 
             <EditText
                 android:id="@+id/percentageInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
+                android:hint="@string/txtOffer"
                 android:inputType="textPersonName"
-                android:padding="10dp"
-                android:text="10%" />
+                android:padding="@dimen/padding" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lay_marginHeight1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/offerImageSelecter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lay_marginLeft"
+                android:layout_marginRight="@dimen/lay_marginRight"
+                android:layout_weight="1"
+                android:backgroundTint="#FDC500"
+                android:text="@string/btnImage" />
+
+        </LinearLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/lay_margin">
 
             <EditText
                 android:id="@+id/locationInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/lay_marginHeight1"
                 android:ems="10"
+                android:hint="@string/txtLocation"
                 android:inputType="textPersonName"
-                android:padding="10dp"
-                android:text="Galle Abans" />
+                android:padding="@dimen/padding" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,12 +186,12 @@
             android:id="@+id/addItemButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="120dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/lay_marginLeft3"
+            android:layout_marginTop="@dimen/lay_marginTop"
+            android:layout_marginRight="@dimen/lay_marginLeft3"
             android:backgroundTint="#FDC500"
-            android:text="@string/btnEdit" />
+            android:text="Submit" />
+
 
 
     </LinearLayout>

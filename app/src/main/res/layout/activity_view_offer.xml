@@ -36,6 +36,19 @@
         android:textSize="@dimen/offerViewNameTextSize" />
 
     <TextView
+        android:id="@+id/bookmarkCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/ic_baseline_bookmarks_24"
+        android:drawableTint="@color/secondaryColor"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="TextView" />
+
+    <TextView
         android:id="@+id/locationSlot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

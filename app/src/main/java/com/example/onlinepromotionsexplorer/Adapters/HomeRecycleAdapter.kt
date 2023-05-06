@@ -14,13 +14,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinepromotionsexplorer.R
 import com.example.onlinepromotionsexplorer.Tools.ImageLoader
 import com.example.onlinepromotionsexplorer.ViewOfferActivity
+import com.example.onlinepromotionsexplorer.models.BookmarkModel
 import com.example.onlinepromotionsexplorer.models.Offer
+import com.example.onlinepromotionsexplorer.models.OfferModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class HomeRecycleAdapter(private val dataSet : MutableList<Offer>) : RecyclerView.Adapter<HomeRecycleAdapter.ViewHolder>(){
+class HomeRecycleAdapter(private val dataSet : MutableList<OfferModel>) : RecyclerView.Adapter<HomeRecycleAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val offerName: TextView
         val bookmarkButton : CheckBox
@@ -46,9 +48,10 @@ class HomeRecycleAdapter(private val dataSet : MutableList<Offer>) : RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.offerName.setText(dataSet[position].offerName)
-        holder.bookmarkButton.isChecked = dataSet[position].bookmarked
-        holder.bookmarks.setText(Offer.getBookmarkString(dataSet[position].totalBookmarks))
+        holder.offerName.setText(dataSet[position].name)
+        //holder.bookmarkButton.isChecked = dataSet[position].bookmarked
+        BookmarkModel.isBookmarked(holder.bookmarkButton,dataSet[position].documentId)
+        holder.bookmarks.setText(Offer.getBookmarkString(dataSet[position].bookmarks))
         ImageLoader.setImageView(dataSet[position].imgLink,holder.imageView)
         holder.layout.setOnClickListener{
             var intent :Intent = Intent(holder.offerName.context, ViewOfferActivity::class.java)
@@ -56,7 +59,7 @@ class HomeRecycleAdapter(private val dataSet : MutableList<Offer>) : RecyclerVie
             holder.offerName.context.startActivity(intent)
         }
         holder.bookmarkButton.setOnClickListener{
-            dataSet[position].bookmarked = !dataSet[position].bookmarked
+            BookmarkModel.markOrUnmark(holder.bookmarkButton,dataSet[position].documentId,holder.bookmarks)
         }
 
     }

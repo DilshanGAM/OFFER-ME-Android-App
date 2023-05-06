@@ -19,12 +19,19 @@
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"/>
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/margin72"
+        android:layout_height="@dimen/margin72"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/icons8_user_44" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeftSize"
-        android:layout_marginTop="@dimen/margin56"
+        android:layout_marginTop="@dimen/margin32"
         android:textSize="@dimen/normalTextsize"
         android:textColor="@color/tintGrey"
         android:text="@string/youremailvalue" />
@@ -131,6 +138,8 @@
         android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="@dimen/normalTextsize"/>
+
+
 
 
 </LinearLayout>

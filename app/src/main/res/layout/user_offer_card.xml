@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/offerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/offer_Radius"
+            app:cardElevation="@dimen/offer_Elevation"
+            app:contentPadding="@dimen/offer_Marg_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/offer_Margin1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userOfferName"
+                        tools:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTitle"
+                        android:textColor="#FDC500"
+                        android:textSize="@dimen/offer_textSize" />
+
+                    <ImageView
+                        android:id="@+id/userOfferImage"
+                        app:srcCompat="@drawable/_1futyzqexl__sl1500_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/offer_Marg_Height"
+                        android:layout_marginLeft="@dimen/offer_Marg_left1"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtInfo"
+                    android:textSize="@dimen/offer_Marg_TextSize2" />
+
+                <TextView
+                    android:id="@+id/userOfferPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtOfferPrice"
+                    android:textSize="@dimen/offer_Marg_textSize3"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/offerEditButton"
+                        tools:backgroundTint="#05950B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btnUpdateOffer" />
+
+                    <Button
+                        android:id="@+id/offerDeleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E80D0D"
+                        android:text="@string/btnDeleteOffer" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="20dp"-->
+        <!--                app:cardCornerRadius="20dp"-->
+        <!--                app:cardElevation="10dp"-->
+        <!--                app:contentPadding="20dp">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <TextView-->
+        <!--                            android:id="@+id/txtTitle"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="Sony Iron"-->
+        <!--                            android:textColor="#FDC500"-->
+        <!--                            android:textSize="32sp"-->
+        <!--                            tools:textStyle="bold" />-->
+
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/imageView3"-->
+        <!--                            android:layout_width="50dp"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:layout_marginLeft="120dp"-->
+        <!--                            android:layout_weight="1"-->
+        <!--                            app:srcCompat="@drawable/_1futyzqexl__sl1500_" />-->
+        <!--                    </LinearLayout>-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtInfo"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtInfo"-->
+        <!--                        android:textSize="20sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtOfferPrice"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Rs.8300.00"-->
+        <!--                        android:textSize="16sp"-->
+        <!--                        android:textStyle="bold|italic" />-->
+        <!--                </LinearLayout>-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="20dp"-->
+        <!--                app:cardCornerRadius="20dp"-->
+        <!--                app:cardElevation="10dp"-->
+        <!--                app:contentPadding="20dp">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <TextView-->
+        <!--                            android:id="@+id/txtTitle"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="Sony Earphone"-->
+        <!--                            android:textColor="#FDC500"-->
+        <!--                            android:textSize="32sp"-->
+        <!--                            tools:textStyle="bold" />-->
+
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/imageView3"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:layout_marginLeft="40dp"-->
+        <!--                            android:layout_weight="1"-->
+        <!--                            app:srcCompat="@drawable/_1futyzqexl__sl1500_" />-->
+        <!--                    </LinearLayout>-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtInfo"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtInfo"-->
+        <!--                        android:textSize="20sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtOfferPrice"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Rs.1990.00"-->
+        <!--                        android:textSize="16sp"-->
+        <!--                        android:textStyle="bold|italic" />-->
+        <!--                </LinearLayout>-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="20dp"-->
+        <!--                app:cardCornerRadius="20dp"-->
+        <!--                app:cardElevation="10dp"-->
+        <!--                app:contentPadding="20dp">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <TextView-->
+        <!--                            android:id="@+id/txtTitle"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="Usha Fan"-->
+        <!--                            android:textColor="#FDC500"-->
+        <!--                            android:textSize="32sp"-->
+        <!--                            tools:textStyle="bold" />-->
+
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/imageView3"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:layout_marginLeft="130dp"-->
+        <!--                            android:layout_weight="1"-->
+        <!--                            app:srcCompat="@drawable/_1futyzqexl__sl1500_" />-->
+        <!--                    </LinearLayout>-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtInfo"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtInfo"-->
+        <!--                        android:textSize="20sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtOfferPrice"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Rs.14870.00"-->
+        <!--                        android:textSize="16sp"-->
+        <!--                        android:textStyle="bold|italic" />-->
+        <!--                </LinearLayout>-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="20dp"-->
+        <!--                app:cardCornerRadius="20dp"-->
+        <!--                app:cardElevation="10dp"-->
+        <!--                app:contentPadding="20dp">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <TextView-->
+        <!--                            android:id="@+id/txtTitle"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="@string/txtTitle"-->
+        <!--                            android:textColor="#FDC500"-->
+        <!--                            android:textSize="32sp"-->
+        <!--                            tools:textStyle="bold" />-->
+
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/imageView3"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:layout_marginLeft="150dp"-->
+        <!--                            android:layout_weight="1"-->
+        <!--                            app:srcCompat="@drawable/_5_157685_coloured_tools_clip_art_construction_tools_clipart_png" />-->
+        <!--                    </LinearLayout>-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtInfo"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtInfo"-->
+        <!--                        android:textSize="20sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtOfferPrice"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtOfferPrice"-->
+        <!--                        android:textSize="16sp"-->
+        <!--                        android:textStyle="bold|italic" />-->
+        <!--                </LinearLayout>-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="20dp"-->
+        <!--                app:cardCornerRadius="20dp"-->
+        <!--                app:cardElevation="10dp"-->
+        <!--                app:contentPadding="20dp">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <TextView-->
+        <!--                            android:id="@+id/txtTitle"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="@string/txtTitle"-->
+        <!--                            android:textColor="#FDC500"-->
+        <!--                            android:textSize="32sp"-->
+        <!--                            tools:textStyle="bold" />-->
+
+        <!--                        <ImageView-->
+        <!--                            android:id="@+id/imageView3"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:layout_marginLeft="150dp"-->
+        <!--                            android:layout_weight="1"-->
+        <!--                            app:srcCompat="@drawable/_5_157685_coloured_tools_clip_art_construction_tools_clipart_png" />-->
+        <!--                    </LinearLayout>-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtInfo"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtInfo"-->
+        <!--                        android:textSize="20sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtOfferPrice"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/txtOfferPrice"-->
+        <!--                        android:textSize="16sp"-->
+        <!--                        android:textStyle="bold|italic" />-->
+        <!--                </LinearLayout>-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+</LinearLayout>

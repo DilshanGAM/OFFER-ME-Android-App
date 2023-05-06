@@ -5,98 +5,24 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_height="match_parent"
 android:layout_width="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical"
-    tools:context=".MyRequestList">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <TextView
-            android:id="@+id/txtRequestid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:hint="Itam name:"
-            android:padding="10dp" />
-
-        <TextView
-            android:id="@+id/txtdates4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:hint="Date:"
-            android:padding="10dp"/>
-
+        android:layout_height="match_parent">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            tools:context=".MyRequestList">
 
-            <Button
-                android:id="@+id/btnUpdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Update"
-                android:backgroundTint="#FDC500"
-                android:layout_marginRight="20dp"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.592">
-
-            </Button>
-
-            <Button
-                android:id="@+id/btnreqCancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Delete"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="#F45050"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.592">
-
-            </Button>
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/requestRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
+    </ScrollView>
 
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-    />
-
-
-    <ImageView
-        android:id="@+id/imgdownarrow"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
-
-</LinearLayout>
-
-<com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
 android:id="@+id/btnfab"
 android:layout_width="80dp"
 android:layout_height="58dp"

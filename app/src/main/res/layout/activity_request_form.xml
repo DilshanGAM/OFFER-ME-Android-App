@@ -9,22 +9,12 @@
     android:orientation="vertical"
     tools:context=".Request_Form">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <Spinner
+        android:id="@+id/requestCategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Select your category"
-            android:textSize="20sp"
-            android:inputType="none">
-
-        </AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/lay_margin1"
+        android:entries="@array/spinner_data" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -41,24 +31,6 @@
 
         </AutoCompleteTextView>
     </com.google.android.material.textfield.TextInputLayout>
-    />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <AutoCompleteTextView
-            android:id="@+id/txtdescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:padding="18dp">
-
-        </AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
-    />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

@@ -32,24 +32,28 @@
                 >
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="128dp"
-                    android:layout_height="128dp"
+                    android:id="@+id/cardView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="120dp"
                     android:layout_marginBottom="50dp"
-                    app:cardCornerRadius="65dp"
+                    app:cardCornerRadius="75dp"
                     app:layout_constraintBottom_toTopOf="@+id/textView10"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
+
                     <ImageView
 
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:id="@+id/imageView5"
+                        android:layout_width="171dp"
+                        android:layout_height="155dp"
                         android:layout_gravity="center_horizontal"
                         android:scaleType="centerCrop"
                         android:src="@drawable/whatsapp_image_2023_03_15_at_19_16_38" />
+
 
                 </androidx.cardview.widget.CardView>
 
@@ -64,13 +68,30 @@
 <!--                    app:layout_constraintStart_toStartOf="parent"-->
 <!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnfab1"
+                    android:layout_width="72dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginStart="101dp"
+                    android:layout_marginTop="106dp"
+                    android:elevation="30dp"
+                    android:src="@drawable/ic_baseline_camera_alt_24"
+                    app:backgroundTint="@color/secondaryColor"
+                    app:fabSize="normal"
+                    app:layout_constraintStart_toStartOf="@+id/cardView"
+                    app:layout_constraintTop_toTopOf="@+id/cardView"
+                    tools:ignore="MissingConstraints">
+
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="104dp"
-                    android:layout_marginBottom="76dp"
+                    android:layout_marginBottom="68dp"
                     android:text="@string/My_account"
                     android:textColor="@color/titleColor"
                     android:textSize="@dimen/titleTextsize"
@@ -93,6 +114,8 @@
                     app:layout_constraintStart_toStartOf="@+id/textView10"
                     app:layout_constraintTop_toBottomOf="@+id/textView10"
                     app:layout_constraintVertical_bias="0.169" />
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

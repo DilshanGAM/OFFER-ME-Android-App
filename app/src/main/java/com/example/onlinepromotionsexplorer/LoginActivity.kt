@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.onlinepromotionsexplorer.models.UIEffects
+import com.example.onlinepromotionsexplorer.models.UserModel
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
@@ -23,6 +24,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
@@ -70,7 +72,14 @@ class LoginActivity : AppCompatActivity() {
             val account : GoogleSignInAccount? = task.result
             if(account != null){
 
-                auth.signInWithCredential(GoogleAuthProvider.getCredential(account.idToken,null))
+
+                auth.signInWithCredential(GoogleAuthProvider.getCredential(account.idToken,null)).addOnSuccessListener {
+
+                    val user = UserModel("",account.displayName!!,"",account.photoUrl.toString())
+                    FirebaseFirestore.getInstance().collection("Users").document(it.user?.uid!!).set(user).addOnSuccessListener {
+                        Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    }
+                }
 
 
             }

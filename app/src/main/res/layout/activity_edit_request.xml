@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,22 +10,12 @@
     android:focusableInTouchMode="true"
     tools:context=".EditRequest">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <Spinner
+        android:id="@+id/requestCategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Select your category"
-            android:textSize="20sp"
-            android:inputType="none">
-
-        </AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/lay_margin1"
+        android:entries="@array/spinner_data" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -40,25 +31,12 @@
             android:padding="18dp">
 
         </AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout><![CDATA[
+
+
     />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <AutoCompleteTextView
-            android:id="@+id/txtdescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:padding="18dp">
-
-        </AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
-    />
+    ]]>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -218,7 +196,7 @@
         </Button>
 
         <Button
-            android:id="@+id/btnreqCancel"
+            android:id="@+id/reqDeleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

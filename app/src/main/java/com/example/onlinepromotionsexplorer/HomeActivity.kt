@@ -1,5 +1,6 @@
 package com.example.onlinepromotionsexplorer
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+
 import com.example.onlinepromotionsexplorer.databinding.ActivityHomeBinding
 import com.example.onlinepromotionsexplorer.models.UIEffects
 
@@ -34,5 +36,6 @@ class HomeActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         supportActionBar?.hide()
         UIEffects.setValidStatusBar(this)
+
     }
 }

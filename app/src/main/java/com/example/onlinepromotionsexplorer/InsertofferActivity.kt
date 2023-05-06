@@ -17,6 +17,8 @@ import com.google.firebase.ktx.Firebase
 import java.util.*
 import androidx.activity.result.contract.ActivityResultContracts.GetContent
 import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia
+import com.example.onlinepromotionsexplorer.ui.notifications.NotificationModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 
 class InsertofferActivity : AppCompatActivity() {
@@ -26,6 +28,12 @@ class InsertofferActivity : AppCompatActivity() {
         setContentView(R.layout.activity_insertoffer)
 
         var imageUri : Uri? = null
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if(currentUser == null){
+            Toast.makeText(this, "Please  login before adding an offer", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,LoginActivity::class.java))
+        }
+
 
 
         //image input dialog initialization
@@ -106,6 +114,7 @@ class InsertofferActivity : AppCompatActivity() {
                     // Image uploaded successfully
                     println("Image uploaded successfully. Download URL: ${taskSnapshot.metadata?.reference?.downloadUrl}")
                     taskSnapshot.metadata?.reference?.downloadUrl.toString()
+
                     taskSnapshot.metadata?.reference?.downloadUrl?.addOnSuccessListener {
                         url = it.toString()
                         println("Download URL: $url")
@@ -118,16 +127,19 @@ class InsertofferActivity : AppCompatActivity() {
                         var percentageInput = findViewById<EditText>(R.id.percentageInput)
                         var locationInput = findViewById<EditText>(R.id.locationInput)
                         println(startInput.text.toString())
-                        var offer = OfferModel(nameInput.text.toString(),categoryInput.selectedItem.toString(),detailsInput.text.toString(),
-                            Date(calendarStart.timeInMillis),Date(calendarEnd.timeInMillis),(priceInput.text.toString()).toDouble(),percentageInput.text.toString().toDouble(),locationInput.text.toString(),url)
+                        var offer = OfferModel("",currentUser!!.uid,nameInput.text.toString(),categoryInput.selectedItem.toString(),detailsInput.text.toString(),
+                            Date(calendarStart.timeInMillis),Date(calendarEnd.timeInMillis),(priceInput.text.toString()).toDouble(),percentageInput.text.toString().toDouble(),locationInput.text.toString(),url,0)
 
                         val fireStore = FirebaseFirestore.getInstance()
                         val offerCollection = fireStore.collection("Offers")
                         offerCollection.add(offer).addOnSuccessListener {
-                            println(it)
+
+                            NotificationModel.sendNotifications(nameInput.text.toString(),categoryInput.selectedItem.toString(),(priceInput.text.toString()).toDouble())
+                            Toast.makeText(this, "Offer inserted successfully", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this,OfferListActivity::class.java))
+
                         }.addOnFailureListener {
-                            println(it)
-                            println("failed")
+
                         }
                     }
 

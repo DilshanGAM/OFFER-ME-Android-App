@@ -54,7 +54,7 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtregEmail"
+            android:id="@+id/edtRegEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RegEmail_Hint_value"
@@ -75,7 +75,7 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPhone"
+            android:id="@+id/edtRegPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/edtPhone_Hint_value"
@@ -96,7 +96,7 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtpassword1"
+            android:id="@+id/edtRegPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/edtPwd1_Hint_value"
@@ -117,7 +117,7 @@
         tools:ignore="InvalidId">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtpassword2"
+            android:id="@+id/edtConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/edtPwd2_Hint_value"
@@ -127,17 +127,17 @@
     <Button
         android:id="@+id/regButton"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/margin32"
-        android:layout_marginLeft="@dimen/marginLeftSize"
-        android:layout_marginRight="@dimen/marginLeftSize"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftSize"
+        android:layout_marginTop="@dimen/margin32"
+        android:layout_marginRight="@dimen/marginLeftSize"
         android:backgroundTint="@color/secondaryColor"
-        android:onClick="clickSubmit"
-        android:textColor="@color/login_btn_text_color"
+        android:onClick="submit"
         android:text="@string/Submit_btn_Value"
-        android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="@dimen/btnText24"/>
+        android:textColor="@color/login_btn_text_color"
+        android:textSize="@dimen/btnText24"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"

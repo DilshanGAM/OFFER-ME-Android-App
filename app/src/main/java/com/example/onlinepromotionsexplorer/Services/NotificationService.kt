@@ -35,9 +35,10 @@ class NotificationService : Service() {
         // Query the Firestore database to get the notifications for the current user
         db.collection("Notifications")
             .whereEqualTo("userId", currentUser?.uid)
-            .whereEqualTo("read", false)
+            .whereEqualTo("recieved", false)
             .get()
             .addOnSuccessListener { result ->
+
                 for (document in result) {
                     // Create a notification for each unread notification
 
@@ -63,7 +64,7 @@ class NotificationService : Service() {
                     notificationManager.notify(0, notification)
 
                     // Mark the notification as read
-                    //document.reference.update("read", true)
+                    document.reference.update("recieved", true)
                 }
             }
             .addOnFailureListener { exception ->

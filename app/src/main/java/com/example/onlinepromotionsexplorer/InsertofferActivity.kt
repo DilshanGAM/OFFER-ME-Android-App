@@ -13,11 +13,9 @@ import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import com.example.onlinepromotionsexplorer.models.OfferModel
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import java.util.*
-import androidx.activity.result.contract.ActivityResultContracts.GetContent
 import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia
-import com.example.onlinepromotionsexplorer.ui.notifications.NotificationModel
+import com.example.onlinepromotionsexplorer.models.NotificationModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 
@@ -134,7 +132,7 @@ class InsertofferActivity : AppCompatActivity() {
                         val offerCollection = fireStore.collection("Offers")
                         offerCollection.add(offer).addOnSuccessListener {
 
-                            NotificationModel.sendNotifications(nameInput.text.toString(),categoryInput.selectedItem.toString(),(priceInput.text.toString()).toDouble())
+                            NotificationModel.sendNotifications(it.id.toString(),nameInput.text.toString(),categoryInput.selectedItem.toString(),(priceInput.text.toString()).toDouble())
                             Toast.makeText(this, "Offer inserted successfully", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this,OfferListActivity::class.java))
 

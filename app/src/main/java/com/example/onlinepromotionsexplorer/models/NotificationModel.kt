@@ -1,14 +1,14 @@
-package com.example.onlinepromotionsexplorer.ui.notifications
+package com.example.onlinepromotionsexplorer.models
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class NotificationModel(var documentId : String , var offerId : String , var userId : String , var isRead : Boolean) {
-    constructor() : this("","","",false)
+class NotificationModel(var documentId : String , var offerId : String , var userId : String , var read : Boolean , var recieved : Boolean) {
+    constructor() : this("","","",false,false)
     companion object{
-        fun sendNotifications(offerName : String , category: String, price : Double){
+        fun sendNotifications(offerId: String ,offerName : String , category: String, price : Double){
             Log.e( "","gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg")
 
             GlobalScope.launch {
@@ -21,9 +21,10 @@ class NotificationModel(var documentId : String , var offerId : String , var use
                                 Log.e( "","kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
                                 val notificationModel = NotificationModel()
                                 notificationModel.documentId = ""
-                                notificationModel.offerId = document.id
+                                notificationModel.offerId = offerId
                                 notificationModel.userId = document.get("userId").toString()
-                                notificationModel.isRead = false
+                                notificationModel.read = false
+                                notificationModel.recieved = false
                                 FirebaseFirestore.getInstance().collection("Notifications").add(notificationModel)
                             }
                     }

@@ -23,6 +23,8 @@ class EditeOfferActivity : AppCompatActivity() {
     companion object{
         val OFFER_MODEL = "OFFER_MODEL"
     }
+
+    //oncreate method
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edite_offer)
@@ -38,6 +40,8 @@ class EditeOfferActivity : AppCompatActivity() {
         var priceInput = findViewById<EditText>(R.id.priceInput)
         var percentageInput = findViewById<EditText>(R.id.percentageInput)
         var locationInput = findViewById<EditText>(R.id.locationInput)
+
+
         categoryInput.setSelection(resources.getStringArray(R.array.spinner_data).indexOf(offerModel!!.category))
         nameInput.setText(offerModel.name)
         detailsInput.setText(offerModel.details)
@@ -57,6 +61,7 @@ class EditeOfferActivity : AppCompatActivity() {
         val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             // Callback is invoked after the user selects a media item or closes the
             // photo picker.
+
             if (uri != null) {
                 imageUri = uri
                 Toast.makeText(this, "Image selected", Toast.LENGTH_SHORT).show()

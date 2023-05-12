@@ -16,10 +16,13 @@ class Offer :java.io.Serializable{
         return "not created calculation function"
     }
 
+
     var offerName:String = "Not inserted"
     var bookmarked: Boolean = false
     var details: String = "Not given"
+
     var imgLink : String  = "null"
+
     var totalBookmarks : Int = 0
     var category : String = "null"
     var startDate : Date = Date()
@@ -28,7 +31,7 @@ class Offer :java.io.Serializable{
     var discount : Double = 0.0
     var location  : String = "null"
 
-
+    //constructor for firebase
     constructor(offerName: String, bookmarked: Boolean, details: String, imgLink: String,totalBookmarks : Int) {
         this.offerName = offerName
         this.bookmarked = bookmarked
@@ -70,6 +73,7 @@ class Offer :java.io.Serializable{
         }
 
 
+        //get offer list from firebase
         fun getOfferList(){
             var database : DatabaseReference = Firebase.database.getReference("Offers")
             database.child("Offers").get().addOnSuccessListener {

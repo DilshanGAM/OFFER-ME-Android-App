@@ -12,8 +12,11 @@ import com.example.onlinepromotionsexplorer.R
 import com.example.onlinepromotionsexplorer.Tools.ImageLoader
 import com.example.onlinepromotionsexplorer.ViewOfferActivity
 import com.example.onlinepromotionsexplorer.models.Notification
+import com.example.onlinepromotionsexplorer.models.NotificationModel
+import com.example.onlinepromotionsexplorer.models.OfferModel
+import com.google.firebase.firestore.FirebaseFirestore
 
-class NotificationRecycleAdapter (private val dataSet : MutableList<Notification>): RecyclerView.Adapter<NotificationRecycleAdapter.ViewHolder>(){
+class NotificationRecycleAdapter (private val dataSet : MutableList<NotificationModel>,private val offerlist : MutableList<OfferModel>): RecyclerView.Adapter<NotificationRecycleAdapter.ViewHolder>(){
     class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         var imageView : ImageView
         var nameView : TextView
@@ -39,18 +42,20 @@ class NotificationRecycleAdapter (private val dataSet : MutableList<Notification
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var notification = dataSet[position]
-        val offer = notification.offer
+        var offer = offerlist[position]
+
 
         ImageLoader.setImageView(offer.imgLink,holder.imageView)
-        holder.nameView.setText(offer.offerName)
-        holder.dateView.setText(offer.getRemainingDateText())
-        if(notification.isRead){
+        holder.nameView.setText(offer.name)
+        holder.dateView.setText(OfferModel.getDaysSince(offer.end).toString() + " Days Remaining")
+        if(notification.read){
             holder.readLight.visibility = View.INVISIBLE
         }
         holder.notificationHolder.setOnClickListener{
+            FirebaseFirestore.getInstance().collection("Notifications").document(notification.documentId).update("read",true)
             var intent : Intent = Intent(holder.nameView.context, ViewOfferActivity::class.java)
             intent.putExtra(ViewOfferActivity.OFFER_TEXT,offer)
-            notification.isRead = true
+            notification.read = true
             holder.nameView.context.startActivity(intent)
         }
 

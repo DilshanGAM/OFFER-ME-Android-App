@@ -20,7 +20,7 @@
         android:layout_marginRight="@dimen/marginLeftSize"/>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/userImageField"
         android:layout_width="@dimen/margin72"
         android:layout_height="@dimen/margin72"
         android:layout_gravity="center_horizontal"

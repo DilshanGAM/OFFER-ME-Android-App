@@ -10,14 +10,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.onlinepromotionsexplorer.AccountSettings
 import com.example.onlinepromotionsexplorer.R
-import com.example.onlinepromotionsexplorer.Register
 import com.example.onlinepromotionsexplorer.Tools.ImageLoader
 import com.example.onlinepromotionsexplorer.databinding.FragmentNotificationsBinding
-import com.example.onlinepromotionsexplorer.models.UIEffects
-import com.example.onlinepromotionsexplorer.models.User
 import com.example.onlinepromotionsexplorer.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

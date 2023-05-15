@@ -26,26 +26,6 @@
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/icons8_user_44" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/marginLeftSize"
-        android:layout_marginTop="@dimen/margin32"
-        android:textSize="@dimen/normalTextsize"
-        android:textColor="@color/tintGrey"
-        android:text="@string/youremailvalue" />
-
-    <EditText
-        android:id="@+id/setEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:layout_marginLeft="@dimen/marginLeftSize"
-        android:layout_marginRight="@dimen/marginLeftSize"
-        android:textColor="@color/titleColor"
-        android:text="skyrek7@gmail.com"
-        app:backgroundTint="@color/fgtpwcolor"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -53,20 +33,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginTop="@dimen/marginLeftSize"
-        android:textSize="@dimen/normalTextsize"
+       android:textSize="@dimen/normalTextsize"
         android:textColor="@color/tintGrey"
         android:text="YOUR NAME" />
 
     <EditText
         android:id="@+id/setName"
-        android:layout_width="match_parent"
+        android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
-        android:textColor="@color/titleColor"
+        android:inputType="textEmailAddress"
         android:text="SKYREK"
-        app:backgroundTint="@color/fgtpwcolor"/>
+        android:textColor="@color/titleColor"
+        app:backgroundTint="@color/fgtpwcolor" />
 
     <TextView
         android:id="@+id/textView3"
@@ -76,18 +56,17 @@
         android:layout_marginTop="@dimen/marginLeftSize"
         android:textSize="@dimen/normalTextsize"
         android:textColor="@color/tintGrey"
-        android:text="YOUR PASSWORD" />
+        android:text="YOUR PHONE NUMBER"/>
 
     <EditText
-        android:id="@+id/setPwd"
+        android:id="@+id/setNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_marginLeft="@dimen/marginLeftSize"
         android:layout_marginRight="@dimen/marginLeftSize"
         android:textColor="@color/titleColor"
-        android:text="SKYREK212121"
-        android:inputType="textPassword"
-        android:drawableRight="@drawable/icons8_eye_24"
+        android:text="0771235671"
         app:backgroundTint="@color/fgtpwcolor"/>
 
     <TextView
@@ -112,7 +91,7 @@
         app:backgroundTint="@color/fgtpwcolor"/>
 
     <Button
-        android:id="@+id/updayeButton"
+        android:id="@+id/updateButton"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/margin56"
         android:layout_marginLeft="@dimen/marginLeftSize"

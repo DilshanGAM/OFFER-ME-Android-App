@@ -8,9 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.onlinepromotionsexplorer.R.id.loginButton
 import com.example.onlinepromotionsexplorer.models.UIEffects
 import com.example.onlinepromotionsexplorer.models.UserModel
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
@@ -39,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this@LoginActivity,Register::class.java))
         }
 
+
         supportActionBar?.hide()
         UIEffects.setValidStatusBar(this)
         auth = FirebaseAuth.getInstance();
@@ -51,6 +55,12 @@ class LoginActivity : AppCompatActivity() {
 
         if(auth.currentUser != null){
             startActivity( Intent(this,HomeActivity::class.java))
+        }
+        var loginButton = findViewById<Button>(R.id.loginButton)
+        var emailField = findViewById<EditText>(R.id.edtEmail)
+        var passwordField = findViewById<EditText>(R.id.edtpassword)
+        loginButton.setOnClickListener {
+            loginWithUsernameAndPassword(emailField.text.toString(),passwordField.text.toString())
         }
 
 
@@ -75,9 +85,12 @@ class LoginActivity : AppCompatActivity() {
 
                 auth.signInWithCredential(GoogleAuthProvider.getCredential(account.idToken,null)).addOnSuccessListener {
 
-                    val user = UserModel("",account.displayName!!,"",account.photoUrl.toString())
+                    val user = UserModel("",account.displayName!!,"",account.photoUrl.toString(),"")
                     FirebaseFirestore.getInstance().collection("Users").document(it.user?.uid!!).set(user).addOnSuccessListener {
                         Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                        //go to home activity
+                        startActivity(Intent(this,HomeActivity::class.java))
+
                     }
                 }
 
@@ -91,6 +104,25 @@ class LoginActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
 
+    }
+    fun loginWithUsernameAndPassword(username: String, password: String) {
+        val firebaseAuth = FirebaseAuth.getInstance()
+
+        firebaseAuth.signInWithEmailAndPassword(username, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Login successful
+                    val user = firebaseAuth.currentUser
+
+                    startActivity(Intent(this,HomeActivity::class.java))
+
+                } else {
+                    Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
+                    // Login failed
+                    val exception = task.exception
+                    // Handle the login error appropriately
+                }
+            }
     }
 
 

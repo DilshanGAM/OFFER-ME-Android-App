@@ -32,6 +32,7 @@ class MyRequestList : AppCompatActivity() {
 
 
     }
+    // load my request list
     fun updateRequestList(){
         val currentUser = FirebaseAuth.getInstance().currentUser
         val firestore = FirebaseFirestore.getInstance()
@@ -43,6 +44,7 @@ class MyRequestList : AppCompatActivity() {
                 requestModel.documentId = document.id
                 requestList.add(requestModel)
             }
+            //request adapter
             val adapter = RequestAdapter(requestList,this)
             val recyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.requestRecycler)
             recyclerView.adapter = adapter

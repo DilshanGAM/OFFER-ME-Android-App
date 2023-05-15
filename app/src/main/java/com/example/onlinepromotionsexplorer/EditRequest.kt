@@ -73,6 +73,7 @@ class EditRequest : AppCompatActivity() {
                 Calendar.DAY_OF_MONTH)).show()
 
         }
+        //update the request
         submit.setOnClickListener {
             val firestore = FirebaseFirestore.getInstance()
 

@@ -67,7 +67,7 @@ class Register : AppCompatActivity() {
 
             }else{
                 createUserWithEmailAndPassword(email,password,onComplete = {
-                    val user = UserModel("",username,phone,"https://www.w3schools.com/w3css/img_avatar3.png")
+                    val user = UserModel("",username,phone,"https://www.w3schools.com/w3css/img_avatar3.png","")
                     FirebaseFirestore.getInstance().collection("Users").document(it!!.uid).set(user).addOnSuccessListener {
                         Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
                     }

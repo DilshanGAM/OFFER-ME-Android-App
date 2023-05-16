@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -27,6 +28,7 @@ import com.example.onlinepromotionsexplorer.Services.NotificationService
 import com.example.onlinepromotionsexplorer.databinding.FragmentHomeBinding
 import com.example.onlinepromotionsexplorer.models.Offer
 import com.example.onlinepromotionsexplorer.models.OfferModel
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -70,7 +72,21 @@ class HomeFragment : Fragment() {
             recyclerView.layoutManager = StaggeredGridLayoutManager(2 ,StaggeredGridLayoutManager.VERTICAL)
 
         }
-
+        binding.root.findViewById<TextInputEditText>(R.id.searchText).setOnClickListener {
+            var text = binding.root.findViewById<TextInputEditText>(R.id.searchText).text.toString()
+            FirebaseFirestore.getInstance().collection("Offers").whereEqualTo("name",text).get().addOnSuccessListener {
+                Offer.offerModelList.clear()
+                for (document in it.documents){
+                    val offerModel  = (document.toObject(OfferModel::class.java)!!)
+                    offerModel?.documentId = document.id
+                    Offer.offerModelList.add(offerModel)
+                }
+                recyclerView.adapter?.notifyDataSetChanged()
+                recyclerView.adapter = HomeRecycleAdapter(Offer.offerModelList)
+                val layoutManager = GridLayoutManager(this.context,2,GridLayoutManager.VERTICAL,false)
+                recyclerView.layoutManager = StaggeredGridLayoutManager(2 ,StaggeredGridLayoutManager.VERTICAL)
+            }
+        }
 
 //        val layoutManager = GridLayoutManager(this.context,2,GridLayoutManager.VERTICAL,false)
 //        recyclerView.layoutManager = GridLayoutManager(this.context,2,GridLayoutManager.VERTICAL,true)

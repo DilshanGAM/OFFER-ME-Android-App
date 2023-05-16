@@ -21,7 +21,9 @@ class MyOfferListAdapter(private val dataSet : MutableList<OfferModel>,private v
    //The ViewHolder class defines the views that make up the UI for each item in a RecyclerView list and initializes them in its init block.
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val offerNameField: TextView
+
         val imageFiled : ImageView
+
         val priceField : TextView
         val editButton : Button
         val deleteButton : Button
@@ -29,7 +31,9 @@ class MyOfferListAdapter(private val dataSet : MutableList<OfferModel>,private v
         init {
             // Define click listener for the ViewHolder's View
             offerNameField = view.findViewById(R.id.userOfferName)
+
             imageFiled = view.findViewById(R.id.userOfferImage)
+
             priceField = view.findViewById(R.id.userOfferPrice)
             editButton = view.findViewById(R.id.offerEditButton)
             deleteButton = view.findViewById(R.id.offerDeleteBtn)
@@ -85,6 +89,7 @@ class MyOfferListAdapter(private val dataSet : MutableList<OfferModel>,private v
 
     }
 
+    //get item count returns the number of items in the data set
     override fun getItemCount(): Int {
         return dataSet.size
     }

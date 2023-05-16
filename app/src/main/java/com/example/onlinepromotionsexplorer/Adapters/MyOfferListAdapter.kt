@@ -15,7 +15,10 @@ import com.example.onlinepromotionsexplorer.models.Offer
 import com.example.onlinepromotionsexplorer.models.OfferModel
 import com.google.firebase.firestore.FirebaseFirestore
 
+
+
 class MyOfferListAdapter(private val dataSet : MutableList<OfferModel>,private val listing : OfferListActivity) : RecyclerView.Adapter<MyOfferListAdapter.ViewHolder>(){
+   //The ViewHolder class defines the views that make up the UI for each item in a RecyclerView list and initializes them in its init block.
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val offerNameField: TextView
         val imageFiled : ImageView
@@ -34,11 +37,14 @@ class MyOfferListAdapter(private val dataSet : MutableList<OfferModel>,private v
 
     }
 
+
+    //oncreateviewholder is called when the recyclerview needs a new viewholder to represent an item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.user_offer_card,parent,false)
         return ViewHolder(view)
     }
 
+    //onbindviewholder is called when the recyclerview wants to bind the viewholder to the data at the specified position
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.offerNameField.text = dataSet[position].name
         holder.priceField.text = (dataSet[position].price - (dataSet[position].percentage * dataSet[position].price/100)).toString()

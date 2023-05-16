@@ -29,7 +29,6 @@ class AccountSettings : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.updateButton).setOnClickListener {
-
             changeDetails(findViewById<EditText>(R.id.setName).editableText.toString(),findViewById<EditText>(R.id.setNumber).editableText.toString(), findViewById<EditText>(R.id.setLocation).editableText.toString())
         }
         findViewById<Button>(R.id.deleteAccButton).setOnClickListener{

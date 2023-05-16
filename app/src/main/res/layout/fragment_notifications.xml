@@ -70,7 +70,7 @@
 <!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/btnfab1"
+                    android:id="@+id/addImageBtn"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
                     android:layout_gravity="bottom|end"

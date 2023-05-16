@@ -15,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class OfferListActivity : AppCompatActivity() {
+
+    //oncreat function
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_offer_list)
@@ -29,6 +31,8 @@ class OfferListActivity : AppCompatActivity() {
         updateOfferList()
 
     }
+
+    //update offer list
     fun updateOfferList(){
         val recycler = findViewById<RecyclerView>(R.id.userOfferRecycle)
         val firestore = FirebaseFirestore.getInstance()

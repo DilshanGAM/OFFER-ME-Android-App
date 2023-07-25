@@ -3,4 +3,5 @@ Android application to share and aware about upgoing offers among community. Use
 <html>
    <h2>Application Overview</h2>
    <img src="all.jpg" alt="Screens" width="100%" height="100%">
+   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7060595362876555264?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 </html>

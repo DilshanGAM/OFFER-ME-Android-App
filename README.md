@@ -7,7 +7,7 @@ Android application to share and aware about upgoing offers among community. Use
       <div>
         
 
-(https://github.com/DilshanGAM/OFFER-ME-Android-App/assets/89896805/138bd766-f9b5-4699-a83f-aa25f6698e21)
+https://github.com/DilshanGAM/OFFER-ME-Android-App/assets/89896805/138bd766-f9b5-4699-a83f-aa25f6698e21
 
 
       </div>

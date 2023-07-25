@@ -5,7 +5,7 @@ Android application to share and aware about upgoing offers among community. Use
    <div>
       <h2>Application Overview</h2>
       <img src="all.jpg" alt="Screens" width="100%" height="100%">
-      <div>
+   </div>
         
 [![Now in Android: 55]          // Title
 (https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail

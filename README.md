@@ -7,9 +7,7 @@ Android application to share and aware about upgoing offers among community. Use
       <img src="all.jpg" alt="Screens" width="100%" height="100%">
    </div>
         
-[![Now in Android: 55]          // Title
-(https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
-(https://github.com/DilshanGAM/OFFER-ME-Android-App/assets/89896805/138bd766-f9b5-4699-a83f-aa25f6698e21 "Now in Android: 55")    // Video Link
+https://github.com/DilshanGAM/OFFER-ME-Android-App/assets/89896805/138bd766-f9b5-4699-a83f-aa25f6698e21
 
     
 </html>
